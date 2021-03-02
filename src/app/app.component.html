@@ -1,0 +1,11 @@
+<div class="container">
+  <div id="comparison">
+    <figure>
+      <div id="handle" #handle></div>
+      <div id="divisor" #divisor></div>
+    </figure>
+    <input type="range" [(ngModel)]="sliderRange" min="0" max="100" value="50" id="slider" #slider (ngModelChange)="moveDivisor($event)">
+
+    <!--  (ngModelChange)="moveDivisor()" -->
+  </div>
+ </div>
