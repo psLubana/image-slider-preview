@@ -14,10 +14,11 @@ import "firebase/analytics";
 // Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent, FileUploadComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {
@@ -33,6 +34,9 @@ export class AppModule {
     };
 
     //Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+    if(!firebase){
+      console.log(firebase)
+      firebase.initializeApp(firebaseConfig);
+    }
   }
 }
