@@ -43,7 +43,7 @@ export class FileUploadComponent implements OnInit {
   // }
 
   selectBeforeFile(event) {
-    console.log(event.target.files);
+    console.log(event);
     var files = event.target.files;
     if (files.length === 0) {
       return;
