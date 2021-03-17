@@ -1,20 +1,21 @@
 <div class="container py-3">
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text">Upload</span>
+      <span class="input-group-text">Before Image</span>
     </div>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="before" name="before" #beforePic [(ngModel)]="beforePic">
+      <input type="file" class="custom-file-input" id="before" name="before" #beforePic >
       <label class="custom-file-label" for="before">Choose file</label>
     </div>
   </div>
+<!-- [(ngModel)]="beforePic" [(ngModel)]="afterPic" -->
 
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text">Upload</span>
+      <span class="input-group-text">After Image</span>
     </div>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="after" name="after" #afterPic [(ngModel)]="afterPic">
+      <input type="file" class="custom-file-input" id="after" name="after" #afterPic>
       <label class="custom-file-label" for="after">Choose file</label>
     </div>
   </div>
@@ -22,14 +23,11 @@
 </div>
 
 
-
-
-
-<form name="save" (submit)="submitForm()" #saveForm="ngForm">
+<!-- <form name="save" (submit)="submitForm()" #saveForm="ngForm">
   <input type="email" #emailInput="ngModel" [(ngModel)]="username" placeholder="Email" name="uname" required email>
   <span *ngIf="emailInput.invalid">Enter Valid email</span>
   <br>
   <input type="password" [(ngModel)]="password"  placeholder="Password" name="pass" required>
   <br>
   <button type="submit" [disabled]="saveForm.form.invalid">Login</button>
-</form>
+</form> -->
