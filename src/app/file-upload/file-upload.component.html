@@ -1,39 +1,32 @@
-<!-- <div *ngIf="currentFile" class="progress">
-  <div
-    class="progress-bar progress-bar-info progress-bar-striped"
-    role="progressbar"
-    attr.aria-valuenow="{{ progress }}"
-    aria-valuemin="0"
-    aria-valuemax="100"
-    [ngStyle]="{ width: progress + '%' }"
-  >
+<div *ngIf="currentFile" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+    attr.aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: progress + '%' }">
     {{ progress }}%
   </div>
-</div> -->
-
+</div>
 
 <div class="container py-3">
-  <!-- <div class="input-group mb-3">
+  <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text">Before Image</span>
+      <span class="input-group-text">Before</span>
     </div>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="before" name="before" (change)="selectFile($event)">
-      <label class="custom-file-label" for="before">Choose file</label>
+      <input #file class="custom-file-input" type="file" id="before" name="before" (change)="selectBeforeFile($event)"/>
+      <label class="custom-file-label" for="before">Choose Before Image</label>
     </div>
-  </div> -->
+  </div>
 
   <!-- [(ngModel)]="beforePic" [(ngModel)]="afterPic" -->
 
-  <!-- <div class="input-group mb-3">
+  <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text">After Image</span>
+      <span class="input-group-text">After</span>
     </div>
     <div class="custom-file">
-      <input type="file" class="custom-file-input" id="after" name="after" #afterPic>
-      <label class="custom-file-label" for="after">Choose file</label>
+      <input type="file" class="custom-file-input" id="after" name="after" (change)="selectAfterFile($event)">
+      <label class="custom-file-label" for="after">Choose After Image</label>
     </div>
-  </div> -->
+  </div>
 
 </div>
 

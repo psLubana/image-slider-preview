@@ -14,8 +14,11 @@ export class FileUploadComponent implements OnInit {
   username;
   password;
 
-  beforePic;
-  afterPic;
+  beforePic: File;
+  beforePicFormData: FormData;
+
+  afterPic: File;
+  afterPicFormData: FormData;
 
   selectedFiles: FileList;
   currentFile: File;
@@ -35,8 +38,25 @@ export class FileUploadComponent implements OnInit {
     );
   }
 
-  selectFile(event) {
-    this.selectedFiles = event.target.files;
+  // selectBeforeFile(event) {
+  //   this.beforePic = event.target.files;
+  // }
+
+  selectBeforeFile(event) {
+    console.log(event.target.files);
+    var files = event.target.files;
+    if (files.length === 0) {
+      return;
+    }
+
+    this.beforePic = files[0];
+    this.beforePicFormData = new FormData();
+    this.beforePicFormData.append("file", this.beforePic, this.beforePic.name);
+
+  }
+
+  selectAfterFile(event) {
+    this.afterPic = event.target.files;
   }
 
   upload() {
